@@ -1,0 +1,26 @@
+<div class="p-grid p-fluid p-justify-center">
+    <div class="p-col-6 p-shadow-5 p-p-5">
+        <div class="p-text-center">
+            <img src="../../../assets/laundry-logo1.jpg" height="300px" width="300px">
+        </div>
+        <div class="p-inputgroup">
+            <span class="p-inputgroup-addon">
+                <i class="pi pi-user"></i>
+            </span>
+            <span class="p-float-label">
+                <input type="text" id="inputgroup" pInputText [(ngModel)]="username"> 
+                <label for="inputgroup">Username</label>
+            </span>
+        </div>
+        <div class="p-inputgroup p-mt-5">
+            <span class="p-inputgroup-addon">
+                <i class="pi pi-lock"></i>
+            </span>
+            <span class="p-float-label">
+                <input type="password" id="inputgroup" pInputText [(ngModel)]="password"> 
+                <label for="inputgroup">Password</label>
+            </span>
+        </div>
+        <button pButton type="button" label="Submit" (click)="login()" class="p-mt-3"></button>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="p-grid p-shadow-5">
+    <div class="navbar p-col-12">
+        <p-menubar [model]="items" [style]="{'background-color': 'white'}">
+            <button pButton type="button" label="Logout" (click)='logout()'></button>
+        </p-menubar>
+    </div>
+</div>
+
+<!-- <div class="mybar">
+    <p-menubar [model]="items" [style]="{'background-color': 'white'}">
+        <ng-template pTemplate="start">
+            <img src="../../../assets/laundry-logo1.jpg" height="40" class="p-mr-2 p-ml-lg-6" routerLink="/dashboard-adm">
+        </ng-template>
+        <ng-template pTemplate="end">
+            <button pButton type="button" class="p-button-rounded logoutbutton p-mr-lg-6" label="Logout" routerLink="/login"></button>
+        </ng-template>
+    </p-menubar>
+    </div> -->
+<router-outlet></router-outlet>

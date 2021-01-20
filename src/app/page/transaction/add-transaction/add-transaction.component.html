@@ -1,0 +1,92 @@
+<div class="p-grid p-fluid p-justify-center p-mt-5">
+    <div class="p-col-6 p-shadow-5 p-p-5">
+        <div class="card">
+            <div class="header">
+                <button pButton pRipple type="button" icon="pi pi-arrow-left" class="p-button-rounded"
+                    routerLink="/list-transaction"></button>
+            </div>
+            <div class="p-text-center">
+                <img src="../../../assets/laundry-logo1.jpg" height="150px" width="150px">
+            </div>
+            <div class="p-fluid p-formgrid p-grid">
+                <div class="p-field p-col-12 p-mt-3">
+                    <span class="p-float-label">
+                        <input type="text" pInputText>
+                        <label for="inputtext">input your customer name</label>
+                    </span>
+                </div>
+                <div class="p-field p-col p-mt-3">
+                    <span class="p-float-label">
+                        <input type="text" pInputText>
+                        <label for="inputtext">input your customer code</label>
+                    </span>
+                </div>
+                <div class="p-field p-col p-mt-3">
+                    <span class="p-float-label">
+                        <input type="text" pInputText>
+                        <label for="inputtext">input your phone number</label>
+                    </span>
+                </div>
+                <div class="p-field p-col-12 p-mt-3">
+                    <span class="p-float-label">
+                        <input type="password" pInputText>
+                        <label for="inputtext">input your address</label>
+                    </span>
+                </div>
+                <div class="p-field p-col p-mt-3">
+                    <span class="p-float-label">
+                        <span class="p-float-label">
+                            <p-dropdown [options]="payment" [(ngModel)]="paymentSelected" optionLabel="paymentName">
+                            </p-dropdown>
+                            <label for="dropdown">Payment Name</label>
+                        </span>
+                    </span>
+                </div>
+                <div class="p-field p-col p-mt-3">
+                    <span class="p-float-label">
+                        <input type="date" pInputText>
+                        <label for="inputtext"></label>
+                    </span>
+                </div>
+                <div class="p-field p-col-12 p-mt-3">
+                    <span class="p-float-label">
+                        <p-dropdown [options]="perfume" [(ngModel)]="perfumeSelected" optionLabel="perfumeName">
+                        </p-dropdown>
+                        <label for="dropdown">Perfume Name</label>
+                    </span>
+                </div>
+                <div class="p-field p-col-12 p-mt-4">
+                    <span class="p-float-label">
+                        <p-dropdown [options]="laundryType" [(ngModel)]="laundryTypeSelected"
+                            optionLabel="laundryTypeName"></p-dropdown>
+                        <label for="dropdown">Laundry Type Name</label>
+                    </span>
+                </div>
+                <div class="p-field p-col-12 p-mt-4">
+                    <span class="p-float-label">
+                        <p-dropdown [options]="durationType" [(ngModel)]="durationTypeSelected"
+                            optionLabel="durationTypeName"></p-dropdown>
+                        <label for="dropdown">Duration Type Name</label>
+                    </span>
+                </div>
+                <div class="p-field p-col p-mt-3">
+                    <span class="p-float-label">
+                        <input type="text" pInputText>
+                        <label for="inputtext">input your item</label>
+                    </span>
+                </div>
+                <div class="p-field p-col p-mt-3">
+                    <span class="p-float-label">
+                        <input type="text" pInputText>
+                        <label for="inputtext">input your total unit</label>
+                    </span>
+                </div>
+                <div class="p-col-12">
+                    <div class="btn-create p-text-right">
+                        <button pButton type="button" label="Submit" class="p-button-info p-ml-2" style="width: 80px;"
+                            routerLink="/list-transaction"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

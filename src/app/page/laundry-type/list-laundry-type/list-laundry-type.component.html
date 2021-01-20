@@ -1,0 +1,78 @@
+<div class="p-grid p-fluid p-jc-center p-mt-5">
+    <div class="p-col-11 p-shadow-5 p-p-5">
+        <div class="card">
+            <div class="header">
+                <p-header class="p-p-5">
+                    <h2>List Laundry Type</h2>
+                </p-header>
+            </div>
+            <div class="btn-create p-mt-3 p-mb-3 p-text-right">
+                <button icon="pi pi-plus" label="Add Laundry Type" pButton type="button" class="p-button-info p-ml-2" 
+                style="width: 190px;" routerLink="/add-laundry-type">
+                </button>                            
+            </div> 
+            <p-dialog header="Edit Laundry Type" [(visible)]="display" [style]="{width:'40vw'}">
+                <div class="p-text-center">
+                    <img src="../../../assets/laundry-logo1.jpg" height="150px" width="150px">
+                </div>
+                <div class="p-field p-col-12 p-mt-3">
+                    <span class="p-float-label">
+                        <input type="text" pInputText> 
+                        <label for="inputtext">input your laundry type name</label>
+                    </span>
+                </div>
+                <div class="p-field p-col-12">
+                    <span class="p-float-label">
+                        <input type="text" pInputText>  
+                        <label for="inputtext">input your laundry type code</label>
+                    </span>
+                </div>
+                <div class="p-field p-col-12">
+                    <span class="p-float-label">
+                        <input type="text" pInputText>  
+                        <label for="inputtext">input your laundry type price</label>
+                    </span>
+                </div>
+        
+                <div class="p-field p-col-12 p-mt-4">
+                    <span class="p-float-label">
+                        <p-dropdown [options]="durationType" [(ngModel)]="durationTypeSelected" optionLabel="durationTypeCode"></p-dropdown>
+                        <label for="dropdown">Duration Type Code</label>
+                    </span>
+                </div>
+                <div class="p-col-12">
+                    <div class="btn-create p-text-right">
+                        <button pButton type="button" label="Submit" class="p-button-info p-ml-2" 
+                        style="width: 80px;" (click)="display=false"></button>
+                    </div> 
+                </div>
+            </p-dialog>
+
+            <p-table [value]="laundryType">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>No.</th>
+                        <th>Laundry Type Name</th>
+                        <th>Laundry Type Code</th>
+                        <th>Laundry Type Price</th>
+                        <th>Duration Type Code</th>
+                        <th>Actions</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-laundryType let-i="rowIndex">
+                    <tr>
+                        <td>{{i+1}}</td>
+                        <td>{{laundryType.laundryTypeName}}</td>
+                        <td>{{laundryType.laundryTypeCode}}</td>
+                        <td>{{laundryType.laundryTypePrice}}</td>
+                        <td>{{laundryType.durationTypeId.durationTypeCode}}</td>
+                        <td>
+                            <button pButton icon="pi pi-pencil" (click)="showDialog()" type="button" label="edit" class="p-button-outlined" style="width: 100px;"></button>&nbsp;
+                            <button pButton icon="pi pi-trash" type="button" label="delete" class="p-button-outlined p-button-danger p-mt-2" style="width: 100px;"></button>
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>

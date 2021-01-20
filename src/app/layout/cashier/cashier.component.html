@@ -1,0 +1,10 @@
+<div class="p-grid p-shadow-5">
+    <div class="navbar p-col-12">
+        <p-menubar [model]="items" [style]="{'background-color': 'white'}">
+            <button pButton type="button" label="Logout" (click)='logout()'></button>
+        </p-menubar>
+    </div>
+</div>
+
+
+<router-outlet></router-outlet>

@@ -1,0 +1,62 @@
+<div class="p-grid p-formgrid p-fluid p-justify-center p-mt-5">
+    <div class="p-col-6 p-shadow-5 p-p-5">
+        <div class="card">
+            <div class="header">
+                <button pButton pRipple type="button" icon="pi pi-arrow-left" class="p-button-rounded"
+                    routerLink="/list-user"></button>
+            </div>
+            <div class="p-text-center">
+                <img src="../../../assets/laundry-logo1.jpg" height="150px" width="150px">
+            </div>
+            <div class="p-fluid p-formgrid p-grid">
+                <div class="p-field p-col-12 p-mt-3">
+                    <span class="p-float-label">
+                        <input type="text" pInputText>
+                        <label for="inputtext">input your username</label>
+                    </span>
+                </div>
+                <div class="p-field p-col-12 p-mt-3">
+                    <span class="p-float-label">
+                        <input type="password" pInputText>
+                        <label for="inputtext">input your password</label>
+                    </span>
+                </div>
+                <div class="p-field p-col-12 p-mt-3">
+                    <span class="p-float-label">
+                        <p-dropdown [options]="role" [(ngModel)]="roleSelected" optionLabel="roleCode"></p-dropdown>
+                        <label for="dropdown">Choose Role Code</label>
+                    </span>
+                </div>
+                <div class="p-field p-col-12 p-mt-3">
+                    <span class="p-float-label">
+                        <input type="text" pInputText>
+                        <label for="inputtext">input your name</label>
+                    </span>
+                </div>
+                <div class="p-field p-col p-mt-3">
+                    <span class="p-float-label">
+                        <p-dropdown [options]="gender" [(ngModel)]="genderSelected" optionLabel="gender"></p-dropdown>
+                        <label for="dropdown">Choose Gender</label>
+                    </span>
+                </div>
+                <div class="p-field p-col p-mt-3">
+                    <span class="p-float-label">
+                        <input type="text" pInputText>
+                        <label for="inputtext">input your phone number</label>
+                    </span>
+                </div>
+                <div class="p-field p-col-12 p-mt-3">
+                    <span class="p-float-label">
+                        <input type="text" pInputText>
+                        <label for="inputtext">input your address</label>
+                    </span>
+                </div>
+                <div class="p-col-12">
+                    <div class="btn-create p-text-right">
+                        <button pButton type="button" label="Submit" class="p-button-info p-ml-2" style="width: 80px;"
+                            routerLink="/list-user"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
